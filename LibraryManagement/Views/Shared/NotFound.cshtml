@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Resource Not Found";
+    var msg = TempData["ErrorMessage"] as string;
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-3 text-danger">Resource Not Found</h1>
+    <p class="lead">
+        @(string.IsNullOrEmpty(msg) ? "The page does not exist." : msg)
+    </p>
+    <a asp-action="Index" asp-controller="Books" class="btn btn-primary">Back to Book List</a>
+</div>

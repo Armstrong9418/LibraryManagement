@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Book Not Available";
+    var msg = TempData["ErrorMessage"] as string;
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-3 text-warning">Book Not Available</h1>
+    <p class="lead">
+        @(string.IsNullOrEmpty(msg) ? "The book you are trying to borrow is currently not available." : msg)
+    </p>
+    <a asp-action="Index" asp-controller="Books" class="btn btn-primary">Back to Book List</a>
+</div>
